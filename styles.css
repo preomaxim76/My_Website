@@ -1,36 +1,23 @@
 body {
-    background-image: linear-gradient(rgb(11, 11, 25), rgb(19, 19, 50), rgb(0, 200, 255));
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
-}
+        background-image: url("media/phone_wallp.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
 
-main {
-    border: solid black;
-    border-radius: 30px;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    background-image: url("media/me_ver3_full_background.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30%
 }
 
 #navbar {
   display: flex;
-  gap: 100px;
-  margin-right: 10% 
+  gap: 25%;
+  margin-right: 25% 
 }
 
 nav p, .link {
@@ -50,7 +37,7 @@ nav p {
 
 #greeting h1 {
     color: white;
-    font-size: 300%
+    font-size: 400%
 }
 
 #greeting h2 {
@@ -74,8 +61,6 @@ nav p {
     height: 20%;
     margin-right: 20%;
     border: solid transparent;
-    border-radius: 30px;
-
 }
 
 #main_body {
@@ -89,7 +74,6 @@ nav p {
     text-decoration: none;
     border: solid rgb(60, 111, 214);
     color: rgb(60, 111, 214);
-    border-radius: 5px;
     font-size: 140%;
     padding: 0.3% 1% 0.3% 1%;
 }
@@ -114,7 +98,7 @@ nav p {
 .icon {
     width: 3%;
     height: auto;
-    border: 3px solid;
+    border: 0.2rem solid;
     border-radius: 50%;
     box-sizing: border-box;
     margin-right: 2.5%;
@@ -123,4 +107,44 @@ nav p {
 
 .icon:hover {
     border: transparent
+}
+
+
+@media (max-width: 768px)
+{
+    
+    main {
+
+    }
+}
+
+@media (min-width: 1025px)
+{
+
+    main {
+        border: solid black;
+        border-radius: 3rem;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        background-image: url("media/me_ver3_full_background.jpg");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    body {
+        background-image: linear-gradient(rgb(11, 11, 25), rgb(19, 19, 50), rgb(0, 200, 255));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #greeting h1 {
+    color: white;
+    font-size: 300%
+}
 }
