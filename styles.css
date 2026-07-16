@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url("media/phone_wallp.webp");
     background-repeat: no-repeat;
@@ -64,8 +69,62 @@ body {
 }
 
 
+    .hc_button {
+        text-decoration: none;
+        border: solid rgb(60, 111, 214);;
+        color: rgb(255, 255, 255);
+        font-size: 160%;
+        
+        padding: 0.3% 1%;
+        border-radius: 10rem;
+
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+
+        z-index: 0
+    }
 
 
+
+    .hc_button::before {
+        content: "";
+
+        position: absolute;
+        inset: -3px;
+
+        border-radius: inherit;
+
+        background: linear-gradient(
+            45deg,
+            #FFBE0B,
+            #FB5607,
+            #FF006E,
+            #8338EC,
+            #3A86FF
+        );
+
+        background-size: 300%;
+        filter: blur(8px);
+
+        z-index: -1;
+        animation: glowing_button 8s linear infinite
+    }
+
+
+    @keyframes glowing_button {
+        from {
+            background-position: 0%;
+        }
+
+        to {
+            background-position: 300%
+        }
+    }
+
+
+
+/* Phone */
 @media (max-width: 428px)
 {
     #greeting p {
@@ -80,23 +139,6 @@ body {
     text-align: center
     }   
 
-    #hire, #contact {
-        text-decoration: none;
-        border: solid rgb(0, 0, 0);
-        color: rgb(0, 0, 0);
-        font-size: 140%;
-        padding: 0.3% 1% 0.3% 1%;
-        border-radius: 1rem;
-        background-color: rgb(55, 55, 226);
-        padding: 2%
-        }
-
-    #hire_and_contact {
-        margin-top: 3%;
-        display: flex;
-        gap: 15%;
-        justify-content: center
-    }
 
     #main_footer {
         margin-left: 5%;
@@ -115,23 +157,34 @@ body {
     .icon:hover {
         border: transparent
     }
+
+    #hire_and_contact {
+    margin-top: 5%;
+    display: flex;
+    gap: 15%;
+    margin-left: 4%;
+    margin-bottom: 10%
+    }
 }
 
+/* Desktop */
 @media (min-width: 1025px)
 {
+    @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 
     main {
         border: solid black;
         border-radius: 3rem;
         margin-right: 5%;
         margin-left: 5%;
-        margin-bottom: 3%;
         margin-top: 3%;
         background-image: url("media/me_ver3_full_background.jpg");
-        background-size: 90%;
+        background-size: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+        box-shadow: 5px 10px 10px rgb(104, 104, 141)
+        
     }
 
     body {
@@ -140,7 +193,8 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-    }
+        overflow: hidden;
+    } 
 
     #greeting h1 {
     color: white;
@@ -190,26 +244,23 @@ body {
         text-decoration: none;
     }
 
+    @keyframes glowing_navbar {
+        0% { color: red }
+        50% { color: blue }
+        100% { color: white}
 
-    #hire, #contact {
-    text-decoration: none;
-    border: solid rgb(60, 111, 214);
-    color: rgb(60, 111, 214);
-    font-size: 140%;
-    padding: 0.3% 1% 0.3% 1%;
-    border-radius: 10rem;
+    }
+
+    .link:hover {
+        animation: glowing_navbar 1s infinite alternate ease-in-out;
     }
 
     #hire_and_contact {
-        margin-top: 3%;
-        display: flex;
-        gap: 3%;
+    margin-top: 5%;
+    display: flex;
+    gap: 3%
     }
 
-    #hire:hover, #contact:hover {
-        color: black;
-        background-color: rgb(77, 148, 255);
-    }
 
     .icon {
     width: 3%;
