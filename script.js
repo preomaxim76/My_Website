@@ -1,4 +1,4 @@
-const isMobileScreen = window.innerWidth < 768;
+const isMobileScreen = window.innerWidth <= 1024;
 
 // Navbar
 if (isMobileScreen)
