@@ -1,25 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-image: url("media/phone_wallp.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.my_custom_nav
-{
-    background-color: rgb(39, 65, 237) !important;
-    width: 100%;
-}
-
-.clicked {
-    color: blue;
-}
+@import url("styles.css");
 
 #greeting h1 {
     color: white;
@@ -59,8 +38,6 @@ body {
     justify-content: space-between;
     width: 100%
 }
-
-
 
 #main_footer {
     margin-left: 5%;
@@ -173,14 +150,14 @@ body {
 @media (min-width: 1025px)
 {
     @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
-
+    
     main {
         border: solid black;
         border-radius: 3rem;
         margin-right: 5%;
         margin-left: 5%;
         margin-top: 3%;
-        background-image: url("media/me_ver3_full_background.jpg");
+        background-image: url("../media/me_ver3_full_background.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -188,15 +165,6 @@ body {
         box-shadow: 5px 10px 10px rgb(104, 104, 141)
         
     }
-
-    body {
-        background-image: linear-gradient(rgb(11, 11, 25), rgb(19, 19, 50), rgb(0, 200, 255));
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        overflow: hidden;
-    } 
 
     #greeting h1 {
     color: white;
@@ -213,48 +181,6 @@ body {
         margin-right: 50%;
         font-size: 150%;
         margin-top: 3%
-    }
-
-    #navbar {
-        display: flex;
-        gap: 25%;
-        margin-right: 25% 
-    }
-
-    nav p {
-        margin-left: 5%;
-        margin-top: 1%;
-    }
-
-
-    nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30%
-    }
-
-    #navbar {
-    display: flex;
-    flex-direction: row;
-    margin-right: 25% 
-    }
-
-    nav p, .link {
-        color: white;
-        font-size: 200%;
-        text-decoration: none;
-    }
-
-    @keyframes glowing_navbar {
-        0% { color: red }
-        50% { color: blue }
-        100% { color: white}
-
-    }
-
-    .link:hover {
-        animation: glowing_navbar 1s infinite alternate ease-in-out;
     }
 
     #hire_and_contact {
