@@ -20,13 +20,13 @@ else
         document.getElementById("nav-placeholder").innerHTML = data;
 
         // Navbar underlining 
-        if (path === "/" || path === "/index.html") {
+        if (path.endsWith("/") || path.endsWith("/index.html")) {
             document.getElementById("index_link").classList.add("active");
         }
-        else if (path === "/about.html") {
+        else if (path.endsWith("/about.html")) {
             document.getElementById("about_link").classList.add("active");
         }
-        else if (path === "/projects.html") {
+        else if (path.endsWith("/projects.html")) {
             document.getElementById("projects_link").classList.add("active");
         }
         // Certificates
