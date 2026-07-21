@@ -71,7 +71,7 @@ body {
 
 .hc_button {
     text-decoration: none;
-    border: solid rgb(60, 111, 214);;
+    border: solid rgb(60, 68, 214);
     color: rgb(255, 255, 255);
     font-size: 160%;
     
@@ -81,7 +81,6 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
-
     z-index: 0
 }
 
@@ -97,18 +96,19 @@ body {
 
     background: linear-gradient(
         45deg,
-        #FFBE0B,
-        #FB5607,
-        #FF006E,
+        #3A86FF,
         #8338EC,
-        #3A86FF
+        #FB5607,
+        #FF006E
+        
+        
     );
 
     background-size: 300%;
     filter: blur(8px);
 
     z-index: -1;
-    animation: glowing_button 8s linear infinite
+    animation: glowing_button 6s linear infinite
 }
 
 
@@ -275,6 +275,13 @@ body {
 }
 
     .icon:hover {
+        transform: scale(1.2);
         border: transparent
+    }
+
+    .hc_button:hover {
+        color: black;
+        border: transparent solid;
+        transform: scale(1.1)
     }
 }
