@@ -1,2 +1,74 @@
 @import url("styles.css");
 @import url("everything_but_i.css") (min-width: 1025px);
+
+.intro h1 {
+    color: white;
+    font-size: 3rem
+}
+
+#text_placeholder {
+    color: white;
+    font-size: 150%;
+}
+
+@media (max-width: 480px)
+{
+    .intro {
+        display: flex;
+        flex-direction: column
+    }
+
+    #question_person {
+        display: none;
+    }
+
+    #whoami {
+        display: none;
+    }
+
+    #text_placeholder {
+        border: solid transparent;
+        background-color: black;
+        border-radius: 1rem;
+        margin: 5%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px)
+{
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kavoon&display=swap');
+
+    /* Each Section */
+    .section {
+        background-image: url("../media/wallpaper.jpg");
+        border: solid transparent;
+        border-radius: 2rem;
+        margin: 2%;
+    }
+
+    .intro {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .intro h1 {
+        font-size: 8rem;
+        font-family: "Bebas Neue"
+
+    }   
+
+    .intro p {
+        width: 30%;
+        font-family: sans-serif;
+        border: solid transparent;
+        padding: .5%
+    }
+    
+    .intro #question_person {
+        border: solid transparent;
+        border-radius: 2rem;
+        margin: 1%
+    }
+
+}

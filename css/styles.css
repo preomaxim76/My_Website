@@ -14,7 +14,7 @@ body {
 .my_custom_nav
 {
     background-color: rgb(39, 65, 237) !important;
-    width: 100%;
+    width: 100vw;
 }
 
 /* Desktop */
@@ -28,7 +28,6 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        overflow: hidden;
     } 
 
 
@@ -60,12 +59,19 @@ body {
 
     @keyframes glowing_navbar {
         0% { color: blue }
-        100% { color: white}
+        100% { color: rgb(217, 0, 246)}
 
     }
 
     .nav_link:hover {
-        animation: glowing_navbar 0.5s infinite alternate ease-in-out;
+        animation: glowing_navbar .5s infinite alternate ease-in-out;
+    }
+}
+
+@media (max-width: 480px)
+{
+    * {
+        overflow-x: hidden;
     }
 }
 

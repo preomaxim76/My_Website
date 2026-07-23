@@ -58,7 +58,8 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    z-index: 0
+    z-index: 0;
+    overflow: hidden;
 }
 
 
@@ -77,15 +78,13 @@
         #8338EC,
         #FB5607,
         #FF006E
-        
-        
     );
 
     background-size: 300%;
     filter: blur(8px);
 
     z-index: -1;
-    animation: glowing_button 6s linear infinite
+    animation: glowing_button 6s linear infinite;
 }
 
 
@@ -98,7 +97,6 @@
         background-position: 300%
     }
 }
-
 
 
 /* Phone */
@@ -144,6 +142,20 @@
     margin-bottom: 10%;
     margin-right: 5%;
     }
+
+    footer p {
+        display: inline;
+        color: white
+    }
+
+    footer {
+        text-align: center;
+        border: solid transparent;
+        background-color: black;
+        border-radius: 2rem;
+        margin: 5%;
+        font-size: 120%
+    }
 }
 
 /* Desktop */
@@ -151,6 +163,11 @@
 {
     @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
     
+    body {
+    overflow: hidden;
+    }
+
+
     main {
         border: solid black;
         border-radius: 3rem;
@@ -209,5 +226,22 @@
         color: black;
         border: transparent solid;
         transform: scale(1.1)
+    }
+
+
+    footer p {
+        display: inline;
+        font-size: 200%;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: .5%;
+        background-color: black;
+        color: white;
+        margin-right: 5%;
+        margin-left: 5%;
+        border: solid transparent;
+        border-radius: 2rem
     }
 }

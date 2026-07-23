@@ -4,11 +4,31 @@ let path = window.location.pathname;
 // Navbar
 if (isMobileScreen)
 {
-    
+    let heading_text = "";
+
     fetch("other_html/mobile_navbar.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("nav-placeholder").innerHTML = data;
+
+        if (path.endsWith("/") || path.endsWith("/index.html")) {
+            heading_text = "Maxim.";
+        }
+
+        else if (path.endsWith("/about.html")) {
+            heading_text = "About.";
+        }
+
+        else if (path.endsWith("/projects.html")) {
+            heading_text = "Projects.";
+        }
+
+        // Certificates
+        else {
+            heading_text = "Certificates."
+        }
+
+        document.querySelector(".navbar-brand").text = heading_text;
 
     })
 }
@@ -49,4 +69,20 @@ if (isMobileScreen)
     
 }
 
-
+// Text (about.html)
+if (path.endsWith("about.html")){
+    if (isMobileScreen) {
+    fetch('other_html/text_about_mobile.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("text_placeholder").innerHTML = data;
+    })
+}
+else {
+    fetch('other_html/text_about.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("text_placeholder").innerHTML = data;
+    })
+}
+}
